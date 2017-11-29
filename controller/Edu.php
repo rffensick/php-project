@@ -4,9 +4,11 @@ class Edu extends Model
 {
 
   private $id;
-  public $name;
   public $user_id;
+  public $place;
   public $type;
+  public $date_from;
+  public $date_to;
 
   /**
    * get table name
@@ -20,9 +22,11 @@ class Edu extends Model
 
   protected function fillData($row)
   {
-    $this->id = $row['id'];
-    $this->name = $row['name'];
-    $this->user_id = $row['user_id'];
-    $this->type = $row['type'];
+    $this->id           = $row['id'];
+    $this->user_id      = $row['user_id'];
+    $this->place        = $row['place'];
+    $this->type         = $row['type'];
+    $this->date_from    = $row['date_from'];
+    $this->date_to      = $row['date_to'];
   }
 }
