@@ -19,3 +19,11 @@ include 'controller/init_controller.php';
 include 'pages/main.php';
 
 
+Users::update(3, [
+    'f_name' => 'c4',
+    's_name' => 'bomba'
+]);
+
+
+$_GET['name'];
+
