@@ -1,12 +1,8 @@
 <?php
-/**
- * connect with model;
- */
-include 'model/model.php';
 
 class Users extends Model
 {
-  private $id;
+  public $id;
   public $f_name;
   public $s_name;
   public $l_name;
@@ -20,7 +16,7 @@ class Users extends Model
     $this->f_name = $row['f_name'];
     $this->s_name = $row['s_name'];
     $this->l_name = $row['l_name'];
-    $this->date   = $row['DoB'];
+    $this->date   = $row['dob'];
   }
 
 

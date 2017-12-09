@@ -1,21 +1,13 @@
 <?php
-
+require_once 'config/db.php';
 /**
  * custom methods.
  */
 include 'config/cus_methods/methods.php';
 
 /**
- * @return $users;
- * DataBase
+ * @return model
  */
-require_once 'config/db.php';
-include 'controller/init_controller.php';
+include 'model/init_controller.php';
 
-$users_db = Users::getAll();
-
-$user = new Users();
-$lol = 'lol';
-$user->{$lol} = 'LOOOL';
-vd($user);
-
+include 'pages/main.php';
