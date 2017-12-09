@@ -35,7 +35,7 @@
                 <td>
                     <div class="btn-group">
                         <a class="btn btn-warning btn-edit" value="Edit">Edit</a>
-                        <a name="do_delete" class="btn btn-danger btn-delete" value="Delete">Delete</a>
+                        <input type="submit" name="do_delete" class="btn btn-danger btn-delete" value="Delete">
                     </div>
                 </td>
             </tr>

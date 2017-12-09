@@ -3,6 +3,7 @@ var add = document.querySelector('.btn-add');
 var trHead = document.querySelector('thead tr');
 var trHeadInputs = document.querySelectorAll('thead input');
 var idInput = document.querySelector('input[name=id_user]');
+var btnDelete = document.querySelectorAll('.btn-delete');
 
 
 function cb() {
@@ -31,7 +32,19 @@ function cb() {
 
 }
 
+function btnDeletefoo() {
+    var tr = this.parentNode.parentNode.parentNode;
+    var trId = tr.getAttribute('data-value');
+
+    idInput.setAttribute('value', trId);
+
+    for (var i = 0; i < trHeadInputs.length; i++) {
+        trHeadInputs[i].removeAttribute('required');
+    }
+}
+
 
 for (var i = 0; i < edit.length; i++) {
     edit[i].addEventListener('click', cb);
+    btnDelete[i].addEventListener('click', btnDeletefoo);
 }

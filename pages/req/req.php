@@ -29,3 +29,9 @@ if (isset($data['do_edit'])) {
 	header('Location: /index.php');
 }
 
+if (isset($data['do_delete'])) {
+	Users::delete($data['id_user']);
+
+	header('Location: /index.php');
+}
+
