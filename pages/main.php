@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -13,40 +13,37 @@
 <body>
 
 <?php $users = Users::getAll();?>
+<form action="pages/req/req.php" method="post">
+    <table class="table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr class="tr-head">
+                <th><input type="text" name="f_name" placeholder="Имя" required></th>
+                <th><input type="text" name="s_name" placeholder="Фамилия" required></th>
+                <th><input type="text" name="l_name" placeholder="Отчество"></th>
+                <th><input type="text" name="dob" placeholder="Дата Рождения" required> <input type="text" name="id_user" value="" hidden> </th>
+                <th><input class="addButton btn btn-primary btn-add" type="submit" name="do_add" value="+"></input></th>
+            </tr>
+        </thead>
 
-<table class="table-bordered table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>Имя</th>
-            <th>Фамилия</th>
-            <th>Отчество</th>
-            <th>Дата Рождение</th>
-            <th><a class="addButton btn btn-primary">+</a></th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <?php foreach ($users as $user): ?>
-        <tr data-value= <?=$user->id?> >
-            <td> <?=$user->f_name ?> </td>
-            <td> <?=$user->s_name ?> </td>
-            <td> <?=$user->l_name ?> </td>
-            <td> <?=$user->date ?> </td>
-            <td>
-                <div class="btn-group">
-                    <a class="btn btn-warning">Edit</a>
-                    <a class="btn btn-danger">Delete</a>
-                </div>
-            </td>
-        </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
-
-<form action="main.php" method="post">
-    <input type="text" name="name">
+        <tbody>
+            <?php foreach ($users as $user): ?>
+            <tr data-value= <?=$user->id?> >
+                <td> <?=$user->f_name ?> </td>
+                <td> <?=$user->s_name ?> </td>
+                <td> <?=$user->l_name ?> </td>
+                <td> <?=$user->date ?> </td>
+                <td>
+                    <div class="btn-group">
+                        <a class="btn btn-warning btn-edit" value="Edit">Edit</a>
+                        <a name="do_delete" class="btn btn-danger btn-delete" value="Delete">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 </form>
 
-<script src="../js/index.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

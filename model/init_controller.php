@@ -6,5 +6,6 @@
  * Time: 4:06 PM
  */
 
+include 'model.php';
 include 'users.php';
 include 'Edu.php';

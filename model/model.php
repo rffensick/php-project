@@ -6,7 +6,6 @@
  * Time: 3:32 PM
  */
 
-
 abstract class Model
 {
   static public function getAll()
@@ -67,6 +66,15 @@ abstract class Model
 
         $sql = "UPDATE " . static::tableName() . " SET {$set} WHERE id = {$id}";
 
+
+        $database = new DataBase();
+        $database->prepare($sql);
+        $database->execute();
+    }
+
+    static public function add($fname, $sname, $lname = null, $dob)
+    {
+        $sql = "INSERT INTO " . static::tableName() . " (f_name, s_name, l_name, dob) VALUES (\"{$fname}\", \"{$sname}\", \"{$lname}\", \"{$dob}\")";
 
         $database = new DataBase();
         $database->prepare($sql);

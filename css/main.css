@@ -28,3 +28,7 @@ a.btn {
     border-color: #212529;
     color: white;
 }
+
+input {
+    text-align: center;
+}
