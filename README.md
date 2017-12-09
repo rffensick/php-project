@@ -5,7 +5,7 @@
 _project is done - **[####################]** 100%_
 
 ## Settings
->1. :+1: **Open (directory: _sqldatabaseexport_) and import .sql file in to table (_portfolio_) DataBase. It's safe(Maybe)**  
+>1. :+1: **Open (directory: _sqldatabaseexport_) and import .sql file in to (_portfolio_) table DataBase. It's safe(Maybe)**  
 >2. :+1: **it's ready to play! :shipit:**
 
 ```php
